@@ -74,4 +74,4 @@ sudo VBoxManage storageattach "$vm_name" \
 sudo VBoxManage showvminfo "$vm_name"
 
 # Start VM
-sudo VBoxManage startvm "$vm_name" --type headless
+sudo VBoxHeadless --startvm "$vm_name" --vrde on &
