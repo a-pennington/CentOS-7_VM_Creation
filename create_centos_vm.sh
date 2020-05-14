@@ -18,6 +18,14 @@ then
 	exit 1
 fi
 
+# Check the '.iso' disc image is exists
+if [ ! -f $iso_path ];
+then
+	printf "Could not find disc image:\t$iso_path\nPlease ensure disc image exists at this location.\nExiting..."
+	exit 1
+fi
+
+
 # Create the install dir if it does not exist
 if [ ! -d "$vm_dir" ]; then sudo mkdir "$vm_dir"; fi
 
